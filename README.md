@@ -10,6 +10,7 @@ A full-stack web application for selling cinema tickets built with Next.js 14, S
 - **Atomic transactions** — All seat operations use Postgres functions to prevent race conditions
 - **Admin panel** — Password-protected interface to manage screenings and view bookings
 - **Mobile responsive** — Clean, responsive design using Tailwind CSS
+- **Comprehensive testing** — Jest + React Testing Library with 45+ tests
 
 ## Tech Stack
 
@@ -145,6 +146,26 @@ Enter the password you set in the `ADMIN_PASSWORD` environment variable. The adm
 ├── .env.local.example
 └── README.md
 ```
+
+---
+
+## Testing
+
+Run the test suite with:
+
+```bash
+npm test                  # Run all tests
+npm run test:watch       # Watch mode
+npm run test:coverage    # With coverage report
+```
+
+**Test Coverage:**
+- ✅ Validation logic (seat isolation, positioning)
+- ✅ Component rendering and interactions
+- ✅ Form validation and submission
+- ✅ Timer countdown and expiry
+
+See [TESTING.md](TESTING.md) for detailed testing documentation.
 
 ---
 
